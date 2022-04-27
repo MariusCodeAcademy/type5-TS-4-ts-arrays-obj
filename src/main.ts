@@ -58,7 +58,7 @@ function getDriversNames(arr: PersonInterface[]): string[] {
   );
   return stringArrDrivers;
 }
-console.log('getDriversNames(people) ===', getDriversNames(people));
+// console.log('getDriversNames(people) ===', getDriversNames(people));
 
 // function getDriversNames(arr: PersonInterface[]): string[] {
 //   return arr
@@ -68,3 +68,51 @@ console.log('getDriversNames(people) ===', getDriversNames(people));
 // }
 
 // 5. atspausdinti visų vairuojančių žmonių lytis
+
+function printDriverGenders(arr: PersonInterface[]): void {
+  // sukti cikla
+  arr.forEach((pObj: PersonInterface): void => {
+    // tikrinti ar vairuotojas
+    if (pObj.hasCar) {
+      // jei vairuotojas = spausdinti
+      // salyga ? true : false
+      // jei vyras => he
+      // jei moteris => she
+      console.log(`${pObj.name} ${pObj.sex === 'male' ? 'he' : 'she'} is a driver`);
+    }
+    // jei ne ne
+  });
+}
+printDriverGenders(people);
+
+// function sum(x: number, y: string): number {
+//   return x;
+// }
+
+// [1, 2, 3].forEach((sk) => console.log(sk + ' sk'));
+
+// 6. parasyti fn kuri suskaiciuoja ir grazina kiek yra vairuojanciu vyru ir moteru
+// pvz {man: 4, woman: 5}
+interface DriverObj {
+  man: number;
+  woman: number;
+}
+
+function getDriversObj(arr: PersonInterface[]): DriverObj {
+  let rezult: DriverObj = {
+    man: 0,
+    woman: 0,
+  };
+
+  arr.forEach((pObj: PersonInterface): void => {
+    // jei vyras tai pridedam vieneta prie
+    if (pObj.sex === 'male') {
+      rezult.man++;
+    } else {
+      rezult.woman++;
+    }
+  });
+  // rezult.woman = arr.length - rezult.man;
+  return rezult;
+}
+console.log('getDriversObj(people) ===', getDriversObj(people));
