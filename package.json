@@ -1,0 +1,22 @@
+{
+  "name": "ts-4-ts-arrays-obj",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -w",
+    "dev": "nodemon public/js/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusCodeAcademy/type5-TS-4-ts-arrays-obj.git"
+  },
+  "keywords": [],
+  "author": "Marius K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusCodeAcademy/type5-TS-4-ts-arrays-obj/issues"
+  },
+  "homepage": "https://github.com/MariusCodeAcademy/type5-TS-4-ts-arrays-obj#readme"
+}

@@ -1,4 +1,14 @@
-const people = [
+export interface PersonInterface {
+  name: string;
+  surname: string;
+  sex: string;
+  age: number;
+  income: number;
+  married: boolean;
+  hasCar: boolean;
+}
+
+export const people: PersonInterface[] = [
   {
     name: 'Jonas',
     surname: 'Jonaitis',
